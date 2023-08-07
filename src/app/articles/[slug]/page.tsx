@@ -7,7 +7,7 @@ import { Heading } from '../../common/components'
 import LoadingComments from './LoadingComments'
 
 const getArticle = async(slug: string) => {
-  const res = await fetch(`https://next13-traning.vercel.app/api/articles/${slug}`, {
+  const res = await fetch(`https://nextjs13-traning.vercel.app/api/articles/${slug}`, {
     next: { 'revalidate': 60 },
   })
 
@@ -25,7 +25,7 @@ const getArticle = async(slug: string) => {
 }
 
 const getComments = async(slug: string) => {
-    const res = await fetch(`https://next13-traning.vercel.app/api/articles/${slug}/comments`, {
+    const res = await fetch(`https://nextjs13-traning.vercel.app/api/articles/${slug}/comments`, {
       cache: 'no-cache',
     })
 
